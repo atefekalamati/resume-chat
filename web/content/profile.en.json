@@ -1,0 +1,480 @@
+{
+  "locale": "en",
+  "name": "Atefe Kalamati",
+  "title": "Python Developer | Junior Data Analyst | Junior AI & Data Engineer",
+  "location": "Mashhad, Iran",
+  "photo": "/photo.jpg",
+  "resumePdf": "/resume-atefekalamati.pdf",
+  "summary": "Python developer and data engineer with over three years of hands-on experience in technology-driven projects. Specialized in backend development with FastAPI, data architecture design, ETL pipelines, data analysis and visualization, and intelligent document processing. Final-semester Statistics student with a practical focus on machine learning and applied statistical analysis.",
+  "contact": {
+    "email": "atefekalamati@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/atefe-kalamati",
+    "github": "https://github.com/atefekalamati"
+  },
+  "about": [
+    "I'm Atefe Kalamati, a Python developer and data engineer with over three years of hands-on experience in technology-driven projects. My main focus is backend development with FastAPI, data architecture design and building ETL pipelines.",
+    "I'm also a final-semester Statistics student at Ferdowsi University of Mashhad, with a practical focus on machine learning and applied statistical analysis. I enjoy combining data analysis, data engineering and AI to build useful, reliable tools."
+  ],
+  "experience": [
+    {
+      "role": "Backend Developer (Python / FastAPI)",
+      "company": "BAMBO – Construction Project Management Platform, Mashhad",
+      "period": "Jul 2026 – Sep 2026",
+      "highlights": [
+        "Developed a comprehensive construction project management platform with a modular backend architecture",
+        "Designed and implemented the backend and REST API with Python, FastAPI, PostgreSQL, SQLAlchemy and Alembic",
+        "Designed the database schema and migrations, separating the Activity, Resource and Resource Assignment architecture",
+        "Designed the ingestion and processing of Microsoft Project (MPP) files and the transfer of their data to the finance module",
+        "Implemented version management for MPP files and a reporting system with CSV/XLSX export",
+        "Implemented role-based access control (RBAC) and designed secure, testable APIs",
+        "Wrote regression and integration tests with pytest and fixed data errors in transfers between modules",
+        "Managed the local development environment with Docker and PostgreSQL, with version control on Git/GitHub"
+      ]
+    },
+    {
+      "role": "Data Analysis & Business Intelligence Intern",
+      "company": "Danay Dornika Intelligent Agents (AHD), Mashhad",
+      "period": "Dec 2022 – Apr 2026",
+      "highlights": [
+        "Developed ETL and data pipelines for structured and unstructured data (Excel, EML and JSON/JSONL)",
+        "Designed REST APIs with FastAPI, including authentication, input validation and Swagger documentation",
+        "Collected data from online sources with web crawling, Playwright and HTTPX",
+        "Built advanced analytical dashboards with Power BI and Excel",
+        "Wrote automated tests with pytest and implemented CI/CD with GitHub Actions"
+      ]
+    },
+    {
+      "role": "Data Analyst (research collaboration)",
+      "company": "Data Science Laboratory, Faculty of Mathematical Sciences, Ferdowsi University of Mashhad",
+      "period": "Dec 2025 – Jan 2026",
+      "highlights": [
+        "Designed and backtested a rule-based peak-reversal trading strategy on 21 years of 15-minute gold data (about 488,000 candles) in a four-person team",
+        "Engineered volatility-based features (ATR, swing-high detection, an Exhaustion ratio and α*) and built a backtesting engine with R-multiples and an equity curve",
+        "Tested robustness across recent time windows and generalized the strategy to EUR/USD (2010–2016)",
+        "Measured look-ahead bias: with a realistic delay for confirming peaks, the win rate fell from 72.2% to about 48.5%",
+        "Documented the notebooks step by step in Persian; a teammate later reused the pipeline for Bitcoin data",
+        "Conducted market research and competitor analysis in medicine and AI for faculty and the Ferdowsi University of Mashhad foundation"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "B.Sc. in Statistics",
+      "school": "Ferdowsi University of Mashhad",
+      "period": "2021 – Present (one semester to graduation)"
+    }
+  ],
+  "skills": [
+    { "group": "Backend Development", "items": ["Python", "FastAPI", "REST API", "OOP", "OpenAPI/Swagger", "RBAC", "Pydantic", "Uvicorn"] },
+    { "group": "Database", "items": ["PostgreSQL", "SQLAlchemy", "Alembic", "psycopg (async)", "SQL", "MongoDB", "Elasticsearch", "DBeaver"] },
+    { "group": "Testing & DevOps", "items": ["pytest", "Integration Testing", "Regression Testing", "Docker", "Git", "GitHub Actions", "CI/CD", "Linux"] },
+    { "group": "Data Analytics & BI", "items": ["Pandas", "NumPy", "Scikit-learn", "Power BI", "Matplotlib", "Seaborn", "EDA", "Statistical Analysis"] },
+    { "group": "Integrations", "items": ["MPXJ", "Java Runtime", "MS Project/MPP", "Google Sheets API", "PaddleOCR", "n8n", "LLM API / OpenAI-compatible"] },
+    { "group": "Web & Research", "items": ["Playwright", "HTTPX", "Web Crawling", "Prompt Engineering", "Market Research", "Data Storytelling", "Jupyter", "VS Code", "MS Excel", "MS Project", "PowerShell"] },
+    { "group": "Languages", "items": ["Persian (native)", "English (upper-intermediate)"] }
+  ],
+  "projects": [
+    {
+      "name": "BAMBO Finance Module",
+      "category": "backend",
+      "period": "Jul 2026 – Sep 2026",
+      "role": "Backend developer (Python/FastAPI) in a two-person team (backend + frontend)",
+      "description": "Cost-control and financial reporting module for BAMBO's construction-monitoring platform. It gives the owner one view of the original estimate, actual spend, current value of completed work and the budget needed to finish the project.",
+      "sections": [
+        {
+          "title": "Estimates, prices and invoices",
+          "items": [
+            "Financial items in four groups (materials, labor, equipment and overhead) with an estimate per activity; the original estimate is never overwritten and every revision is recorded with full history.",
+            "Append-only price history, with prices entered manually, from Excel or from Google Sheets, and unit conversion.",
+            "Multi-line invoices with gap-free sequential numbering; a confirmed invoice cannot be edited or deleted and changes only through a correction or cancellation document.",
+            "Project progress read from Microsoft Project (MPP) files with the MPXJ library, as read-only snapshots."
+          ]
+        },
+        {
+          "title": "AI invoice capture",
+          "items": [
+            "Invoice data extracted from photos with PaddleOCR and from Persian voice notes with Whisper; both run on the project's own server.",
+            "AI output is only a draft and has no effect on financial reports until a user confirms it.",
+            "Uploaded files checked in three steps (extension, file type and magic bytes); when extraction is unavailable, the system says so explicitly instead of guessing."
+          ]
+        },
+        {
+          "title": "Reporting and access",
+          "items": [
+            "Management dashboard, report builder, print and PDF versions, and CSV/XLSX export.",
+            "Periodic reports stored as immutable snapshots; changes to current prices never alter earlier reports.",
+            "Each user can access only their own organization's and project's data, and invoice management needs a separate permission."
+          ]
+        },
+        {
+          "title": "Architecture and quality",
+          "items": [
+            "51 API endpoints on FastAPI and PostgreSQL 16, with separate domain, services and repository layers and parameterized SQL on psycopg (no ORM); the OpenAPI contract stays in sync with the code.",
+            "Financial integrity protected by 21 database invariants and a trigger that locks issued invoices; in a concurrency test, 6 simultaneous requests received 6 distinct numbers.",
+            "Safe migration on real data, verified by 30 acceptance tests over 53 existing invoices; issued numbers were preserved unchanged and downgrade was safe.",
+            "1,361 backend tests passing, with CI on GitHub Actions for every push.",
+            "Status: validated in an isolated environment; acceptance in the host's production environment is still pending."
+          ]
+        }
+      ],
+      "tech": ["Python 3.12", "FastAPI", "Pydantic", "PostgreSQL 16", "psycopg", "Alembic", "pytest", "MPXJ", "PaddleOCR", "Whisper", "GitHub Actions"],
+      "link": "https://github.com/atefekalamati/FinanceBambo"
+    },
+    {
+      "name": "BAMBO Pilot Management Platform",
+      "category": "backend",
+      "period": "Jul 2026 – Sep 2026",
+      "role": "Backend developer (Python/FastAPI); backend and frontend were separate roles in this project",
+      "description": "A system that manages each BAMBO customer's pilot period before signing a contract: from project registration and drawing intake to field surveys, owner training, evaluation and the commercial offer.",
+      "sections": [
+        {
+          "title": "Workflow and approvals",
+          "items": [
+            "The process is a state machine with 19 sequential stages and 5 approval gates (G1–G5); the next stage cannot start until the current one is approved.",
+            "Each stage has a checklist, submission, approval, rejection and correction; rejection requires a reason and errors are reported at the field level.",
+            "Five structured forms (F01–F05) matching the reference file: coordination, readiness, operations, customer success and incidents.",
+            "Each approval is saved as a hashed, immutable snapshot; later corrections create a new version and history is never lost."
+          ]
+        },
+        {
+          "title": "Login and access control",
+          "items": [
+            "SMS one-time-password (OTP) login with rate limiting and a transactional lock.",
+            "Roles and an access matrix for every stage and gate, with access control switchable on or off by a single key.",
+            "SMS notifications with every attempt and delivery result logged, plus per-user notification settings."
+          ]
+        },
+        {
+          "title": "Field operations",
+          "items": [
+            "Secure DWG drawing uploads checked for size, extension, MIME type and file signature; SHA-256 blocks duplicates and drawings are versioned.",
+            "Survey mission scheduling with time-overlap detection and PostgreSQL row locks, with a separate status for each floor.",
+            "Full incident lifecycle from report to closure, with response deadlines by severity (critical 30 minutes, major 4 hours, normal the same day); an open critical incident blocks gate G4."
+          ]
+        },
+        {
+          "title": "Reporting, architecture and quality",
+          "items": [
+            "9 key performance indicators (KPIs) such as successful upload rate, re-survey rate and average satisfaction; missing data is never reported as zero.",
+            "93 API endpoints and 24 Alembic migrations on FastAPI, SQLAlchemy 2 and PostgreSQL; Persian PDFs with WeasyPrint and Jalali dates with persiantools.",
+            "Full audit of all 19 stages and 5 gates (UI, API, access, storage, notifications, approval and gate) with zero errors, and 218 pytest test functions.",
+            "Runs with Docker Compose, CI on GitHub Actions and runbooks for deployment, rollback and backup; a load test has not been run yet."
+          ]
+        }
+      ],
+      "tech": ["Python", "FastAPI", "SQLAlchemy 2", "Pydantic 2", "PostgreSQL", "Alembic", "pytest", "WeasyPrint", "Docker Compose", "GitHub Actions"],
+      "link": "https://github.com/atefekalamati/bamboPlatform"
+    },
+    {
+      "name": "ATK Online Accessory Store Backend",
+      "category": "backend",
+      "role": "Product owner and sole developer: from the requirements document (PRD) to architecture, implementation, tests and CI/CD",
+      "description": "A complete API for a direct-to-customer online accessory store, covering the whole purchase flow: catalog, cart, login, pricing, inventory, orders and online payment.",
+      "sections": [
+        {
+          "title": "Features",
+          "items": [
+            "Product catalog with color, size and model variants, filtering and best-seller sorting.",
+            "Guest and user carts, merged after login; the final price is always calculated on the server.",
+            "Mobile-number OTP login, access and refresh tokens with rotation, and role and permission management.",
+            "Discount rules and codes with usage limits, address management, shipping methods and shipping cost calculation."
+          ]
+        },
+        {
+          "title": "Inventory, orders and payments",
+          "items": [
+            "Temporary stock reservations that prevent overselling: tested with 20 concurrent buyers on a stock of 7 and 18 multi-item carts with crossed lock order, stock never went negative.",
+            "Checkout with an Idempotency-Key so a double click never creates a duplicate order; an order state machine and automatic cancellation when a reservation expires.",
+            "Payment results applied in a single transaction, late or duplicate payments moved to a \"needs refund\" state, and a reconciliation job for pending payments using an advisory lock."
+          ]
+        },
+        {
+          "title": "Architecture and quality",
+          "items": [
+            "Modular monolith on FastAPI, fully async with PostgreSQL 16 through SQLAlchemy 2 and asyncpg; 66 API endpoints and 25 Alembic migrations.",
+            "About 927 tests in 77 files run in parallel, with code quality checked by strict mypy and ruff.",
+            "CI runs lint, type checks and tests, fails on skipped tests, scans for secrets with gitleaks and smoke-tests a staging environment; a Docker image is published to GHCR for each phase."
+          ]
+        },
+        {
+          "title": "Planning and status",
+          "items": [
+            "The project is split into 6 phases and 148 tasks with clear acceptance criteria, with 52 architecture decision records (ADRs).",
+            "The MVP is fully implemented and about 66% of the whole project is done; the next steps are user accounts, the admin panel and release."
+          ]
+        }
+      ],
+      "tech": ["Python 3.12", "FastAPI", "SQLAlchemy 2 (async)", "asyncpg", "PostgreSQL 16", "Alembic", "PyJWT", "pytest", "Docker Compose", "GitHub Actions"],
+      "link": "https://github.com/atefekalamati/accessorProject"
+    },
+    {
+      "name": "Peak-Reversal Short Strategy: Backtesting on Gold & EUR/USD",
+      "category": "data",
+      "period": "Dec 2025 – Jan 2026",
+      "role": "Data analyst in a four-person team at the Data Science Laboratory, Faculty of Mathematical Sciences (strategy design, backtesting and validation)",
+      "description": "A research project asking whether local price peaks on the 15-minute chart can be identified well enough to open short trades with a positive expected return. Teammates built a machine-learning version (Gradient Boosting); my part was a transparent, rule-based baseline plus the tests showing how far it can be trusted.",
+      "sections": [
+        {
+          "title": "Design and feature engineering",
+          "items": [
+            "Built the full pipeline from raw OHLCV data to trade results.",
+            "Computed ATR(14) volatility and detected swing highs (a candle that is the highest within 3 candles on each side).",
+            "Designed an Exhaustion feature (upper wick ÷ ATR) that measures buyers failing to hold the high, and defined α* (the largest drop after a peak within the next 48 candles, normalized by ATR and capped at 5) as the measure of reversal strength.",
+            "Signal filter: confirmed peak, Exhaustion ≥ 0.6 and α* ≥ 1.0."
+          ]
+        },
+        {
+          "title": "Backtesting engine",
+          "items": [
+            "Entry 0.7 ATR below the peak, stop-loss 1 ATR above and take-profit 1 ATR below the entry (1:1 risk/reward), with a 48-candle holding limit.",
+            "Results tracked in R-multiples and plotted as an equity curve, with breakdowns by period and by year.",
+            "Every distance expressed in ATR units, so the rules carry over without retuning between markets with very different prices (gold at about $2,000 vs EUR/USD at about 1.1)."
+          ]
+        },
+        {
+          "title": "Results and robustness",
+          "items": [
+            "Gold (2004–2025, about 488,000 candles): 12,878 simulated trades with a 72.2% win rate in the initial backtest.",
+            "Recent windows: 68.3% win rate over the last year, 71.7% over 6 months and 66.7% over 3 months (only 18 trades); no signals in the last month.",
+            "EUR/USD (2010–2016, 174,734 candles): yearly win rate between 71.9% and 77.4%, with 490–710 trades per year."
+          ]
+        },
+        {
+          "title": "Validation and limitations",
+          "items": [
+            "Treating each peak as known only after its 3 confirming candles close (a realistic live-trading assumption), the gold win rate fell to about 48.5% over 11,469 trades: no edge before trading costs.",
+            "The α* filter barely changed the result (72.0% without it); almost all of the initial edge came from entering before the peak was confirmed, so the initial numbers are an upper bound, not live performance.",
+            "Next steps: confirmation-delayed entries, walk-forward testing, spread and commission costs, and replacing α* with a feature that only uses past data."
+          ]
+        }
+      ],
+      "tech": ["Python", "pandas", "NumPy", "Matplotlib", "Jupyter"],
+      "link": "https://github.com/Data-Science-Laboratory-Projects/Data_Analysis_Project"
+    },
+    {
+      "name": "Online Retail Analysis — Sales, Customers & Retention",
+      "category": "data",
+      "role": "Data analyst; personal project from raw data to dashboard",
+      "description": "Analysis of over one million real transactions from a UK online giftware wholesaler (Dec 2009 – Dec 2011) to answer where sales growth came from, how dependent revenue is on a few customers and products, and how many new customers come back.",
+      "sections": [
+        {
+          "title": "Data and method",
+          "items": [
+            "Public UCI Online Retail II dataset with 1,067,371 rows.",
+            "Data cleaning that set aside 3.8% of rows (40,355): duplicates, rows without a customer ID, zero prices and non-product codes; cancellations were analyzed separately.",
+            "Exploratory analysis in three notebooks, testable functions for KPIs, RFM, cohorts and LTV, and a 2-page Power BI dashboard."
+          ]
+        },
+        {
+          "title": "Key findings",
+          "items": [
+            "Net revenue of £18.9M from 39,246 orders and 5,852 customers; the 2.3% revenue growth in the last year came from larger orders, not more orders.",
+            "High revenue concentration: 20% of customers generate 77% and 22% of products generate 80% of revenue; September to November makes up 41% of yearly revenue.",
+            "RFM segmentation identified 236 high-value customers at risk of churn, worth £901K.",
+            "About 21% of new customers buy again the next month; average customer lifetime value (LTV) is £634 at 3 months and £1,373 at 12 months."
+          ]
+        },
+        {
+          "title": "Quality and limitations",
+          "items": [
+            "117 automated pytest tests check the cleaning and calculations.",
+            "The data includes revenue only, not costs or profit; the LTV model is simple and based on past data."
+          ]
+        }
+      ],
+      "tech": ["Python", "pandas", "Jupyter", "pytest", "Power BI", "DAX"],
+      "link": "https://github.com/atefekalamati/online-retail-analysis"
+    },
+    {
+      "name": "Maven Market Retail Intelligence",
+      "category": "data",
+      "role": "BI developer; personal project from data model to dashboard and SQL queries",
+      "description": "Star-schema model and 6-page Power BI dashboard for a 24-store chain in the USA, Mexico and Canada (1997–1998), built to separate real sales growth from growth driven by new store openings.",
+      "sections": [
+        {
+          "title": "Data and model",
+          "items": [
+            "269,720 sales rows and 7,087 return rows for 10,281 customers, 1,560 products and 24 stores.",
+            "Preparation and quality checks in Python: duplicate rows flagged rather than deleted (to keep them traceable), 20 postal codes fixed and 57 days without sales identified.",
+            "Star schema with 2 fact tables (sales and returns) and 4 dimensions (date, customer, product and store)."
+          ]
+        },
+        {
+          "title": "Implementation",
+          "items": [
+            "Power BI report built as code (PBIP/TMDL) with 63 DAX measures; all 124 measure checks were correct.",
+            "Analytical and practice T-SQL queries run and validated on SQL Server, plus 173 automated tests."
+          ]
+        },
+        {
+          "title": "Key findings",
+          "items": [
+            "Reported sales grew 112.2%, but same-store growth was only 8.4%, and 92.5% of the increase came from 11 new stores.",
+            "Gross margin stayed around 59.6% in both years and the return rate was 0.99%.",
+            "The top 10% of customers generate 39.9% of revenue; store size and sales have a correlation of -0.10, so bigger stores do not necessarily sell more."
+          ]
+        }
+      ],
+      "tech": ["Python", "pandas", "pytest", "Power BI (PBIP/TMDL)", "DAX", "SQL Server", "T-SQL"],
+      "link": "https://github.com/atefekalamati/maven-market-retail-intelligence"
+    },
+    {
+      "name": "Did the Tehran Stock Exchange Beat Inflation?",
+      "category": "data",
+      "role": "Data analyst; personal project covering data collection, ETL, analysis and dashboard",
+      "description": "A study of the Tehran Stock Exchange's real returns against the consumer price index over 36 months (2023–2026), asking whether investing in the market preserved purchasing power.",
+      "sections": [
+        {
+          "title": "Data and method",
+          "items": [
+            "Daily prices of 8 major stocks, the overall, equal-weight and 7 sector indices from TSETMC, CPI from the Statistical Centre of Iran, and yields of 103 government bonds from Fara Bourse.",
+            "Python ETL in separate modules for fetching, quality control, preparation and analysis; TSETMC data errors, such as an index recorded at one-tenth of its value for 5 days, were found and fixed.",
+            "Real returns adjusted for inflation, 12-month rolling returns, stock correlations and a 4-page Power BI dashboard."
+          ]
+        },
+        {
+          "title": "Key findings",
+          "items": [
+            "Prices rose ×3.62; the overall index lost 6.6% and the equal-weight index 26.4% in real terms, while cash rial lost 72% of its purchasing power.",
+            "Only 3 of 8 stocks beat inflation, and correlations of 0.70–0.95 between stocks limit diversification.",
+            "A 50-trading-day market closure caused a 15.6% real loss by reopening; government bonds also returned about -19% in real terms."
+          ]
+        },
+        {
+          "title": "Limitations",
+          "items": [
+            "The sample covers 8 large stocks, not the whole market, over a three-year period; this analysis is not investment advice."
+          ]
+        }
+      ],
+      "tech": ["Python", "pandas", "algotik-tse", "Jupyter", "pytest", "Power BI", "DAX"],
+      "link": "https://github.com/atefekalamati/tse-inflation-analysis"
+    },
+    {
+      "name": "TSE Market Monitor",
+      "category": "data",
+      "role": "Data engineer and BI developer; personal project from ETL to data warehouse, scheduling, queries and dashboard",
+      "description": "A SQL Server data warehouse for all 747 Tehran Stock Exchange and Fara Bourse symbols: a repeatable, reliable foundation for daily market data rather than a one-off analysis.",
+      "sections": [
+        {
+          "title": "Data warehouse architecture",
+          "items": [
+            "Separate staging, dw and etl layers; a star schema with 4 dimensions and 5 fact tables, where the symbol dimension is SCD Type 2 so renames and sector changes keep their history.",
+            "Incremental loads with stored procedures, MERGE and watermarks; loads are idempotent: the first run inserted 936,649 rows and a second run on the same data changed nothing.",
+            "Runs automatically Saturday to Wednesday at 16:00 with Windows Task Scheduler."
+          ]
+        },
+        {
+          "title": "Data quality and optimization",
+          "items": [
+            "Reconciliation of total trade value between source and warehouse, with zero difference.",
+            "187 price-scale errors found and fixed, and 94 symbol first-listing days identified to avoid false returns.",
+            "One suitable index cut a query's logical reads from 11,464 to 64; 28 T-SQL queries were run and validated on the data."
+          ]
+        },
+        {
+          "title": "Dashboard and findings",
+          "items": [
+            "6-page Power BI dashboard with 43 DAX measures; all 112 numeric checks were correct, with 78 automated tests.",
+            "The overall index grew 304.5% in rials but fell about 23% in dollars.",
+            "Retail money inflow correlates 0.685 with same-day returns but only 0.283 with next-day returns: retail money follows the market rather than predicting it."
+          ]
+        }
+      ],
+      "tech": ["Python", "pandas", "SQL Server", "T-SQL", "Stored Procedures", "Windows Task Scheduler", "Power BI", "DAX", "pytest"]
+    },
+    {
+      "name": "Competitor Analysis in Medicine & AI",
+      "category": "data",
+      "role": "Data Analyst (research collaboration) at the Data Science Laboratory, Faculty of Mathematical Sciences, Ferdowsi University of Mashhad",
+      "description": "Market research and competitor identification in medicine and AI for faculty and the Ferdowsi University of Mashhad foundation, with an interactive comparison dashboard.",
+      "sections": [
+        {
+          "title": "Research and data collection",
+          "items": [
+            "Market research and competitor identification in medicine and AI.",
+            "Data extraction from online sources with web crawling and Playwright."
+          ]
+        },
+        {
+          "title": "Analysis and presentation",
+          "items": [
+            "Data processing with Pandas and an interactive comparison dashboard in Power BI."
+          ]
+        }
+      ],
+      "tech": ["Python", "Playwright", "Power BI", "Pandas", "Web Crawling"]
+    },
+    {
+      "name": "ETL Pipeline for Enterprise Data Processing",
+      "category": "data",
+      "role": "Data Analysis & Business Intelligence Intern at Danay Dornika Intelligent Agents (AHD)",
+      "description": "Extract, transform and load pipeline for Excel, EML and JSON/JSONL files, with a REST API and automated tests.",
+      "sections": [
+        {
+          "title": "Data processing",
+          "items": [
+            "Extraction, transformation and loading of structured and unstructured data from Excel, EML and JSON/JSONL files."
+          ]
+        },
+        {
+          "title": "API",
+          "items": [
+            "REST API with FastAPI, including authentication, input validation and Swagger documentation."
+          ]
+        },
+        {
+          "title": "Quality",
+          "items": [
+            "Automated tests with pytest and CI/CD with GitHub Actions."
+          ]
+        }
+      ],
+      "tech": ["Python", "FastAPI", "Pandas", "HTTPX", "pytest", "CI/CD"]
+    },
+    {
+      "name": "Feasibility Study: Residential Care Center for Retired Faculty of Ferdowsi University of Mashhad",
+      "category": "strategy",
+      "role": "Legal, Risk & Strategic Analyst",
+      "description": "Contributed to a comprehensive feasibility study of an investment project for the Ferdowsi University of Mashhad Foundation, focused on legal aspects, risk identification and strategic options for building and operating the center.",
+      "sections": [
+        {
+          "title": "Legal and risk review",
+          "items": [
+            "Reviewed the legal requirements, regulations and permits needed to launch and operate the center.",
+            "Identified, classified and assessed the project's legal, financial, execution and operational risks."
+          ]
+        },
+        {
+          "title": "Strategic option analysis",
+          "items": [
+            "Analyzed investment options, execution structures and operating models.",
+            "Assessed the benefits and limits of partnering with specialized operators and of alternative execution models.",
+            "Evaluated each option's strategic impact on capital commitment, the foundation's risk and the project's sustainability."
+          ]
+        },
+        {
+          "title": "Recommendations and final report",
+          "items": [
+            "Contributed to executive and strategic recommendations to reduce risk and improve the project's feasibility.",
+            "Contributed to the final management report and a decision-oriented recommendation to the university foundation."
+          ]
+        }
+      ],
+      "tech": ["Risk Analysis", "Feasibility Study", "Strategic Analysis", "Investment Option Appraisal", "Legal Requirements Review", "Management Decision-Making"]
+    }
+  ],
+  "stats": [
+    { "value": "3+", "label": "Years of experience" },
+    { "value": "11", "label": "Projects" },
+    { "value": "Python", "label": "Main stack" }
+  ],
+  "chat": {
+    "welcome": "Hi! I'm Atefe's AI assistant. Ask me anything about her experience, skills or projects.",
+    "suggestions": [
+      "What is Atefe's work experience?",
+      "What did she do on the BAMBO project?",
+      "What data analysis skills does she have?"
+    ]
+  }
+}

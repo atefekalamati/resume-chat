@@ -1,0 +1,16 @@
+node_modules
+.next
+.env
+.env.*
+!.env.example
+test-results
+playwright-report
+*.zip
+site-backup-*
+.claude/settings.local.json
+
+# Personal or unused files kept out of the public repo
+/photo_5910974846391226009_w.jpg
+/resume-atefekalamati.pdf
+/chat-reply.png
+/package-lock.json
